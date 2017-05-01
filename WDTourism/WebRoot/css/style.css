@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+.links path{
+	stroke:gray;
+	fill:gray;
+	stroke-width:1;
+	transition:1s;	
+}
+.links path:hover{
+	stroke:orange;
+	fill:orange;
+	stroke-width:2;
+	cursor:hand;
+}
+.links text{
+	stroke:green
+	font:15px/25px Georgia,serif;
+}
+.node circle{
+	fill: #666699;
+	cursor:hand;
+}
+.node text{
+	stroke:blue;
+	font:15px/25px Georgia,serif;
+}
+.context-menu{
+	position:fixed;
+	list-style-type:none;
+	min-width:100px;
+	margin:0;
+	padding:0;
+	font:italic bold 12px/20px arial,sans-serif;
+}
+.context-menu li{
+	background-color:#465c71;
+	color:#dde4ec;
+	padding:2px 10px;
+	cursor:hand;
+	border:1px #4e667d solid;
+	transition:0.5s;
+}
+.context-menu li:hover{
+	background-color:#bfcbd6;
+	color:#465c71;
+}
+.message_box{
+	color:#D8000C;
+	background-color:#FFBABA;
+	border:1px solid;
+	marign:0px 0px;
+	padding:15px 10px 15px 15px;
+	display:inline-block;
+	position:fixed;
+	z-index:100;
+	cursor:move;
+}
+.message_box span{
+	float:left;
+	display:inline-block;
+}
+.message_box a{
+	float:left;
+	display:inline-block;
+}
+.message_box a{
+	float:right;
+	display:inline-block;
+}
+.message_box textarea{
+}
+	
+	
+	

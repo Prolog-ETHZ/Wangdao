@@ -1,0 +1,106 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>逍遙遊</title>
+    <link type="text/css" href="main.css" rel="stylesheet" />
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!--<script type="text/javascript" src="http://www.google.com/jsapi"></script>-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="scene_marker.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="main519.js"> </script>
+    <script type="text/javascript">
+        function Finish(){
+
+            var new_arr = [];
+            for(var i =0;i<10;i++){
+                if(arr[i]!=undefined){
+                    new_arr.push(arr[i]);
+
+                }
+
+            }
+            if(new_arr.length==0){
+                return ;
+            }
+            var content="";
+            for(var i=0;i<new_arr.length;i++){
+                alert(scenes[new_arr[i]]["location"]+","+scenes[new_arr[i]]["type"]+","+scenes[new_arr[i]]["name"]+","+scenes[new_arr[i]]["lng"]+","+scenes[new_arr[i]]["lat"]+","+scenes[new_arr[i]]["rec"]+","+scenes[new_arr[i]]["web1"]+","+scenes[new_arr[i]]["web2"]+","+""+scenes[new_arr[i]]["time"]+","+scenes[new_arr[i]]["pic"]);
+                var tmp = scenes[new_arr[i]]["location"]+","+scenes[new_arr[i]]["type"]+","+scenes[new_arr[i]]["name"]+","+scenes[new_arr[i]]["lng"]+","+scenes[new_arr[i]]["lat"]+","+scenes[new_arr[i]]["rec"]+","+scenes[new_arr[i]]["web1"]+","+scenes[new_arr[i]]["web2"]+","+scenes[new_arr[i]]["time"]+","+scenes[new_arr[i]]["pic"];
+                content+=tmp+"&";
+
+            }
+            $("#Go").val(content);
+            $("#hide").submit();
+
+        }
+    </script>
+</head>
+
+<body>
+<div id="title"></div>
+<div id="map_canvas" ></div>
+
+<div id='cssmenu'> <ul>
+    <li><a href='#'><span>個人資訊</span></a></li>
+    <li><a href='#'><span>系統設置</span></a></li>
+    <li><a href='#'><span>群智共享</span></a></li>
+    <li><a href='#'><span>完成規劃</span></a></li>
+    <li class='last'><a href='#'><span>聯絡我們</span></a></li>
+</ul> </div>
+<div id="address"> <input id="address-input"  type="text" placeholder="查詢景點"> </div>
+<a href="#" class="myButton">GO</a>
+<div id="rightBar"  align="center">   <img id = "size" src="attr.png"/> </div>
+
+<div id="bottomBar">
+    <div id="timeline"></div>
+    <div id="letsgo"><img id="mp" src="driving.png" ondblclick="Try()"></div>
+    <div id="dest1" class="dest"></div>
+    <div id="dest2" class="dest"></div>
+    <div id="dest3" class="dest"></div>
+    <div id="dest4" class="dest"></div>
+    <div id="dest5" class="dest"></div>
+    <div id="dest6" class="dest"></div>
+    <div id="dest7" class="dest"></div>
+    <div id="dest8" class="dest"></div>
+    <div id="dest9" class="dest"></div>
+    <div id="dest10" class="dest"></div>
+    <div id="dropzone1" class="dropzone"> </div>
+    <div id="dropzone2" class="dropzone"></div>
+    <div id="dropzone3" class="dropzone"></div>
+    <div id="dropzone4" class="dropzone"></div>
+    <div id="dropzone5" class="dropzone"></div>
+    <div id="dropzone6" class="dropzone"></div>
+    <div id="dropzone7" class="dropzone"></div>
+    <div id="dropzone8" class="dropzone"></div>
+    <div id="dropzone9" class="dropzone"></div>
+    <div id="dropzone10" class="dropzone"></div>
+    <div id="z0_1" class="A_B"></div>
+    <div id="z1_2" class="A_B"></div>
+    <div id="z2_3" class="A_B"></div>
+    <div id="z3_4" class="A_B"></div>
+    <div id="z4_5" class="A_B"></div>
+    <div id="z5_6" class="A_B"></div>
+    <div id="z6_7" class="A_B"></div>
+    <div id="z7_8" class="A_B"></div>
+    <div id="z8_9" class="A_B"></div>
+    <div id="z9_10" class="A_B"></div>
+    <div id="choose_mode">
+        <input type="radio" name="mode" id="driving" value="driving" onclick="changeMode(this.id,this.checked)" checked><label for="driving"> 行車 </label>
+        <input type="radio" name="mode" id="walking" value="walking" onclick="changeMode(this.id,this.checked)"><label for="walking"> 步行(有些地方無法預測?) </label>
+        <input type="radio" name="mode" id="transit" value="transit" onclick="changeMode(this.id,this.checked)"><label for="transit"> 大眾運輸 </label>
+
+    </div>
+</div>
+
+
+<div id="gmarker"></div>
+<div id="infoBar">
+ 
+</div>
+
+
+
+</body></html>

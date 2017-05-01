@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ExampleServlet</servlet-name>
+    <servlet-class>com.wdtourism.servlet.ExampleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.wdtourism.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExampleServlet</servlet-name>
+    <url-pattern>/servlet/ExampleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/servlet/SearchServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AttractionDetailsServlet</display-name>
+    <servlet-name>AttractionDetailsServlet</servlet-name>
+    <servlet-class>com.wdtourism.servlet.AttractionDetailsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ExpandServlet</servlet-name>
+    <servlet-class>com.wdtourism.servlet.ExpandServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdvancedSearch</servlet-name>
+    <servlet-class>com.wdtourism.servlet.AdvancedSearch</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>AttractionDetailsServlet</servlet-name>
+    <url-pattern>/servlet/AttractionDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExpandServlet</servlet-name>
+    <url-pattern>/servlet/ExpandServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdvancedSearch</servlet-name>
+    <url-pattern>/servlet/AdvancedSearch</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+ <style type="text/css">
+      .node .group{
+          fill:orange;
+      }
+   </style>
+     
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <head>
+  <title>WDTourism.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  
+  
+  </head>
+  
+  <body>
+     <div id="container" align="center">
+       <input id="input"/>
+       <a href="javascript:search()">Search Engine</a>
+       <br>
+       <svg id="wdtourism" width="800" height="500" style="border:1px solid #cd0000;">
+          <defs>
+             <filter id="filter" filterUnits="userSpaceOnUse">
+               <feOffset in="SourceAlpha" dx="3" dy="3" result="offset"/>
+               <feGaussianBlur in="offset" stdDeviation="3" result="blur"/>
+               <feMerge>
+                   <feMergeNode in="blur"/>
+                   <feMergeNode in="SourceGraphic/>
+               </feMerge>
+             </filter>
+          </defs>
+       </svg>
+       
+     </div>
+    <script src="./js/prototype.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+      
+      <script>
+      
+
+var Graphic = function(svg_id){
+	this.hello= function(){
+	    alert(svg_id);
+	    
+	}
+	var self = this;
+	var _event_handlers ={};
+	var _disable_default_context_menu = function(){d3.event.stopPropagation();d3.preventDefault();return false;};
+	var _node_date ={};
+	var _link_data={};
+	var _svg;
+	if(svg_id){
+		_svg = d3.select("body").append("svg").attr("width",1000).attr("height",800).style("border","1px #000 solid");
+	}else{
+		_svg = d3.select("body").append("svg").attr("width",1000).attr("height",800).style("border","1px #000 solid");
+	}
+}
+var d1 = new Graphic("wdtourism");
+ function search(){
+          d1.hello();
+          //  var tid = document.getElementById("input").value;
+         //   d1.call_service("http://localhost:8080/WDTourism//servlet/ExampleServlet",function(json){
+           //     console.log(json);
+              // d1.merge_graphic(json);
+               // d1.update();
+            //});
+ }
+ 
+        
+        
+        
+      </script>
+     
+  </body>
+</html>
